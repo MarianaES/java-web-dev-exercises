@@ -1,4 +1,4 @@
-package org.launchcode.java.demos.lsn3classes1;
+package exercises.ch4;
 
 // Start working here with your Student class.
 // To instantiate the Student class, add your code to the main in the file, SchoolPractice.
@@ -34,18 +34,18 @@ public class Student {
     }
 
     public void setName(String aName) {
-        name = aName;
+        this.name = aName;
     }
 
     public void setStudentId(int aStudentId) {
-        studentId = aStudentId;
+        this.studentId = aStudentId;
     }
 
     public void setNumberOfCredits(int aNumberOfCredits) {
-        numberOfCredits = aNumberOfCredits;
+        this.numberOfCredits = aNumberOfCredits;
     }
 
     private void setGpa(double aGpa) {
-        gpa = aGpa;
+        this.gpa = aGpa;
     }
 }
