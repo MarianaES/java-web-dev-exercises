@@ -1,4 +1,4 @@
-package exercises;
+package exercises.ch2;
 
 public class MyFirstClass {
 
