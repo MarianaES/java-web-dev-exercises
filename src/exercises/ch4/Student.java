@@ -48,4 +48,38 @@ public class Student {
     private void setGpa(double aGpa) {
         this.gpa = aGpa;
     }
+
+    public void addGrade(int courseCredits, double grade) {
+        // Update the appropriate fields: numberOfCredits, gpa
+        double totalQualityScore = this.gpa * this.numberOfCredits;
+        totalQualityScore += grade * courseCredits;
+        this.numberOfCredits += courseCredits;
+        this.gpa = totalQualityScore / this.numberOfCredits;
+    }
+
+    public String getGradeLevel() {
+        // Determine the grade level of the student based on numberOfCredits
+        if (this.numberOfCredits >= 90) return "Senior";
+        if (this.numberOfCredits >= 60) return "Junior";
+        if (this.numberOfCredits >= 30) return "Sophomore";
+        if (this.numberOfCredits > 0) return "Freshman";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentId == student.studentId && numberOfCredits == student.numberOfCredits && Double.compare(student.gpa, gpa) == 0 && name.equals(student.name);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", studentId=" + studentId +
+                ", numberOfCredits=" + numberOfCredits +
+                ", gpa=" + gpa +
+                '}';
+    }
 }
