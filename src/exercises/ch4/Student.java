@@ -62,7 +62,8 @@ public class Student {
         if (this.numberOfCredits >= 90) return "Senior";
         if (this.numberOfCredits >= 60) return "Junior";
         if (this.numberOfCredits >= 30) return "Sophomore";
-        if (this.numberOfCredits > 0) return "Freshman";
+        else  return "Freshman";
+
     }
 
     @Override
