@@ -56,4 +56,14 @@ public class MenuItem {
         newDish = aNewDish;
     }
 
+    @Override
+    public String toString() {
+        return "MenuItem{" +
+                "dishName='" + dishName + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", newDish=" + newDish +
+                '}';
+    }
 }
