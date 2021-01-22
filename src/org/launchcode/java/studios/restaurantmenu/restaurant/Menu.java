@@ -16,4 +16,26 @@ public class Menu {
     public Date getLastUpdated() {
         return this.lastUpdated;
     }
+
+    public void addDish(MenuItem dishName) {
+        if (!listOfDishes.contains(dishName)) {
+            listOfDishes.add(dishName);
+            this.lastUpdated = new Date();
+        } else {
+            System.out.println("This dish is already on the menu, don't forget it!");
+        }
+    }
+
+    public void removeDish(MenuItem dishName) {
+        listOfDishes.remove(dishName);
+        this.lastUpdated = new Date();
+    }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "listOfDishes=" + listOfDishes +
+                ", lastUpdated=" + lastUpdated +
+                '}';
+    }
 }
