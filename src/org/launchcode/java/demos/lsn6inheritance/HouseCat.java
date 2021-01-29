@@ -1,6 +1,13 @@
 package org.launchcode.java.demos.lsn6inheritance;
 
 public class HouseCat extends Cat {
+
+    public static void main(String[] args) {
+        HouseCat jiji = new HouseCat("Jiji", 12);
+        jiji.eat();
+        System.out.println(jiji.isTired());
+    }
+
     private String name;
     private String species = "Felis catus";
 
